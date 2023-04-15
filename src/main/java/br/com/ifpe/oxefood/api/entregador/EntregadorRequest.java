@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class EntregadorRequest {
 
    private String nome;
@@ -49,10 +50,11 @@ public class EntregadorRequest {
    private boolean ativo;
 
 
-   public EntregadorRequest build() {
+   public Entregador build() {
 
        return Entregador.builder()
                .nome(nome)
+               .dataNascimento(dataNascimento)
                .cpf(cpf)
                .rg(rg)
                .foneCelular(foneCelular)
